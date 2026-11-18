@@ -1,0 +1,7 @@
+{
+  "0": "SQL Injection",
+  "1": "Buffer Overflow",
+  "2": "Cross-Site Scripting",
+  "3": "Integer Overflow",
+  "4": "Safe Code"
+}

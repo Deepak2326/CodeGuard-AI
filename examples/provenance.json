@@ -1,0 +1,47 @@
+[
+  {
+    "file": "sql_injection.java",
+    "expected_label": 0,
+    "source": "Java/src/testcases/CWE89_SQL_Injection/s01/CWE89_SQL_Injection__Environment_executeBatch_01.java",
+    "function": "bad",
+    "split": "test",
+    "license": "NIST public domain / CC0",
+    "sha256": "c7ea1a0a9c6c77eacd1f90e1823b96ba8dc930b5b1f50f41690b885f47244258"
+  },
+  {
+    "file": "buffer_overflow.c",
+    "expected_label": 1,
+    "source": "C/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE129_rand_01.c",
+    "function": "CWE121_Stack_Based_Buffer_Overflow__CWE129_rand_01_bad",
+    "split": "test",
+    "license": "NIST public domain / CC0",
+    "sha256": "0ddbe444ae55833c479c3ba77b175e5e36706343b906777573f2c7ac73101fc1"
+  },
+  {
+    "file": "xss.java",
+    "expected_label": 2,
+    "source": "Java/src/testcases/CWE80_XSS/s01/CWE80_XSS__CWE182_Servlet_URLConnection_01.java",
+    "function": "bad",
+    "split": "test",
+    "license": "NIST public domain / CC0",
+    "sha256": "b87927e3ea2f7c9bbc3edf240dd50672e6454537ad8daa71c6489169fab7630c"
+  },
+  {
+    "file": "integer_overflow.c",
+    "expected_label": 3,
+    "source": "C/testcases/CWE190_Integer_Overflow/s01/CWE190_Integer_Overflow__char_max_add_01.c",
+    "function": "CWE190_Integer_Overflow__char_max_add_01_bad",
+    "split": "test",
+    "license": "NIST public domain / CC0",
+    "sha256": "67630a4caef69145e5694c69dcdfd4ebff765682edfd0be5da383cfd6b1d0183"
+  },
+  {
+    "file": "safe_code.c",
+    "expected_label": 4,
+    "source": "C/testcases/CWE121_Stack_Based_Buffer_Overflow/s01/CWE121_Stack_Based_Buffer_Overflow__CWE129_rand_01.c",
+    "function": "goodB2G",
+    "split": "test",
+    "license": "NIST public domain / CC0",
+    "sha256": "2931e02abfc91ca943e0d668d7dd8aac5ec3fd01708a799e8f5dda3d1fb46a74"
+  }
+]

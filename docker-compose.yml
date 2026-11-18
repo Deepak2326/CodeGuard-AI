@@ -1,0 +1,24 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports: ["127.0.0.1:8000:8000"]
+    environment:
+      MODEL_DIR: /app/ml/artifacts
+      HISTORY_ENABLED: ${HISTORY_ENABLED:-false}
+      DATABASE_URL: sqlite:////app/data/history.db
+      CORS_ORIGINS: http://localhost:8080
+    volumes:
+      - ./ml/artifacts:/app/ml/artifacts:ro
+      - history:/app/data
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports: ["127.0.0.1:8080:80"]
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  history:

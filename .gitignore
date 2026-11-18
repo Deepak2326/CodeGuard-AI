@@ -1,0 +1,13 @@
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+node_modules/
+dist/
+.env
+*.db
+ml/datasets/raw/
+ml/datasets/processed/
+ml/artifacts/*.joblib
+*.log
+*.tsbuildinfo

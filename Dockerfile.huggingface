@@ -1,0 +1,14 @@
+FROM python:3.14-slim
+WORKDIR /app
+COPY backend/requirements.lock /app/backend/requirements.lock
+RUN pip install --no-cache-dir -r /app/backend/requirements.lock
+COPY backend /app/backend
+COPY ml /app/ml
+COPY frontend/dist /app/frontend/dist
+RUN useradd --create-home codeguard && mkdir -p /app/data && chown -R codeguard:codeguard /app
+USER codeguard
+ENV MODEL_DIR=/app/ml/artifacts
+ENV PYTHONUNBUFFERED=1
+EXPOSE 7860
+HEALTHCHECK --interval=30s --timeout=10s --start-period=45s CMD python -c "import urllib.request,json; r=json.load(urllib.request.urlopen('http://127.0.0.1:7860/api/health')); assert r['model_ready']"
+CMD ["uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "7860", "--no-access-log"]

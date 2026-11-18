@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "folds": 5,
+  "ngram_range": [
+    3,
+    5
+  ],
+  "max_features": 40000,
+  "min_df": 2,
+  "calibration": "sigmoid",
+  "threshold": 0.65,
+  "selection": "validation macro F1",
+  "train_folds": 2
+}
